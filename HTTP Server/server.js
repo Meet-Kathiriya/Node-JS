@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const port = 1008; 
+const port = 1008;
 
 const handlerequest = (req, res) => {
     let filename = '';
