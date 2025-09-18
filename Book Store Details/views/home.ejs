@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">📚 Book Store</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="/addbook" class="btn">+ Add Book</a>
+  </nav>
+
+  <!-- Books Section -->
+  <div class="container">
+    <h1 class="title">Available Books</h1>
+    <div class="card-container">
+      <% data.map((e,i)=>{ %>
+        <div class="card">
+          <h2><%= e.title %></h2>
+          <p><strong>Author:</strong> <%= e.author %></p>
+          <p><strong>Category:</strong> <%= e.category %></p>
+          <p><strong>Price:</strong> ₹ <%= e.price %></p>
+          <p class="desc"><%= e.description %></p>
+          <div class="actions">
+            <a href="/editbook?id=<%= e.id %>" class="btn edit">Edit</a>
+            <a href="/deletebook?id=<%= e.id %>" class="btn delete">Delete</a>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">📚 Book Store</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-container">
+    <h1>Edit Book</h1>
+    <form action="/updatebook" method="post" class="book-form">
+        <input type="text" hidden value="<%=singleData.id %>" placeholder="Enter id" name="id">
+
+        <label for="">Title:</label>
+        <input type="text" value="<%=singleData.title%>" placeholder="Enter Title" name="title">
+
+        <label for="">Author:</label>
+        <input type="text" value="<%=singleData.author%>" placeholder="Enter Author" name="author">
+
+        <label for="">Category:</label>
+        <input type="text" value="<%=singleData.category%>" placeholder="Enter Category" name="category">
+
+        <label for="">Price:</label>
+        <input type="number" value="<%=singleData.price%>" placeholder="Enter Price" name="price">
+
+        <label for="">Description:</label>
+        <textarea  name="description" rows="3"><%=singleData.description%></textarea>
+
+        <button type="submit" class="btn">✏️ Update Book</button>
+    </form>
+    </div>
+</body>
+</html>
