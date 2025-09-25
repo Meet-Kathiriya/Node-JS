@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movie</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🎬 Movie Store</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Edit Movie</h1>
+
+        <form action="/updatemovie" method="post" enctype="multipart/form-data">
+            <input type="text" value="<%=singleData._id%>" hidden placeholder="Enter Movie ID" name="id">
+            <input type="text" value="<%=singleData.title%>" placeholder="Enter Movie Title" name="title">
+            <input type="text" value="<%=singleData.genre%>" placeholder="Enter Genre" name="genre">
+            <input type="number" value="<%=singleData.year%>" placeholder="Enter Year" name="year">
+            <input type="file" name="poster">
+            <img src="<%=singleData.poster%>" width="10%" alt="">
+            <button type="submit">Update Movie</button>
+        </form>
+    </div>
+</body>
+</html>
