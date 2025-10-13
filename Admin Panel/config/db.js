@@ -1,11 +1,11 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/AdminPanelMVC");
 
 const db = mongoose.connection;
 
-db.once("open", (err) => {
-   err ? console.log(err) : console.log("DB connected!!");
+db.once("open",(err)=>{
+    err ? console.log(err) : console.log("Db connected successfully !")
 })
 
-module.exports = db
+module.exports = db;
