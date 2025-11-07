@@ -10,6 +10,7 @@ route.post("/login", passport.authenticate("local",{failureRedirect:"/"}) ,contr
 route.get("/dashboard",passport.checkAuth,control.dashboard);
 route.get("/addAdmin",passport.checkAuth,control.addAdmin);
 route.get("/viewAdmin",passport.checkAuth,control.viewAdmin);
+
 route.get("/changePass",passport.checkAuth,control.changePass);
 route.post("/verifyPass",passport.checkAuth,control.verifyPass);
 
@@ -19,6 +20,9 @@ route.get("/editData",control.editData);
 route.post("/admin-update", multer,control.updateData)
 
 route.get("/logout",control.logout)
+
+route.post("/forgetPass",control.forgetPass);
+route.post("/verifyOtp",control.verifyOtp);
 
 
 module.exports = route; 
