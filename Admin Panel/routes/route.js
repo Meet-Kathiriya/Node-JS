@@ -25,4 +25,4 @@ route.post("/forgetPass",control.forgetPass);
 route.post("/verifyOtp",control.verifyOtp);
 
 
-module.exports = route; 
+module.exports = route;
